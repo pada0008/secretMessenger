@@ -1,0 +1,107 @@
+* {
+    /**padding: 0;
+    margin: 0;
+    box-sizing: border-box; **/
+}
+
+:root {
+    font-size: calc(1.5vh + 1.5vw + 1vmin);
+}
+
+body {
+    font-size: 1.0rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+}
+
+span.name {
+    float: left;
+    width: 60%;
+    font-size: 0.9rem;
+    /**padding: 0.5rem 0;
+    margin: 0; **/
+    overflow: hidden;
+    /*    color: #333;*/
+    color: cornflowerblue;
+}
+
+span.dob {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.midline {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.midline-top {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+}
+
+.hide {
+    display: none;
+}
+
+.usericon {
+    margin-right: 10px;
+    color: lightcoral;
+}
+
+.note {
+    margin: 100px 0;
+}
+
+err {
+    text-align: center;
+    color: red;
+}
+
+.err {
+    text-align: center;
+    color: red;
+}
+
+img.media-object.pull-left {
+    width: 43px;
+    height: auto;
+}
+
+.img-show {
+    height: auto;
+    border-bottom-color: transparent;
+    align-content: center;
+    text-align: center;
+/*    border: 1px gray solid;*/
+}
+
+.img-show img {
+    width: 95%;
+    height: auto;
+    align-content: center;
+}
+
+
+/******* star rating system *******/
+
+.input {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 5px 0;
+}
+
+.lbl {
+    padding: 2px;
+    width: 100%;
+}
+
+
+/****** end star rating system ******/
+
+.msg {
+    text-align: center;
+    padding: 250px 0px;
+}

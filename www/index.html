@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca file://*  'unsafe-eval'; style-src 'self' http://* 'unsafe-inline'; media-src *; img-src 'self' http://*  data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title> Secret Messenger </title>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a id="btn-msg" class="btn btn-link hide" href="message.html"></a>
+        <a id="btn-logout" class="btn btn-link btn-nav pull-left" href="#model-login"> <span class="icon icon-left-nav"></span> logout </a>
+        <h1 class="title"> Messenger </h1> <a id="btn-send" class="btn btn-link btn-nav pull-right" href="#model-send">
+                send
+                <span class="icon icon-right-nav"> </span>
+            </a> </header>
+    <div class="content hide" id="page-index">
+        <ul class="table-view" id="msg-list"> </ul>
+    </div>
+    <div id="model-login" class="modal active">
+        <header class="bar bar-nav">
+            <h1 class="title">Messenger</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group">
+                    <div class="input-row">
+                        <label>Username</label>
+                        <input id="user_name" type="text" placeholder="Username" value="pada0008" required> </div>
+                    <div class="input-row">
+                        <label>Email</label>
+                        <input id="email" type="text" value="pada0008@algonquinlive.com" placeholder="Email" required> </div>
+                    <div class="err" id="err"></div>
+                </form>
+                <p class="content-padded">
+                    <button id="btn-login" class="btn btn-block"> Login </button>
+                    <button id="btn-register" class="btn btn-primary btn-block"> Register </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="model-send" class="modal">
+        <header class="bar bar-nav">
+            <a id="btn-sendClose" class="icon icon-close pull-right" href="#model-send"></a>
+            <h1 class="title">Send</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group">
+                    <div id="err-1" class="err"></div>
+                    <div class="img-show" id="place-img"> 
+<!--                    <img src="img/icon.camera.jpg" id="imgs" />-->
+                    </div>
+                    <canvas id="myCanvas" height="300" width="300" class="hide"></canvas>
+                    <div class="">
+                        <label class="lbl">Recipient</label>
+                        <br>
+                        <select id="recipient_id" class="input">
+                            <option value="">Select Recipient</option>
+                        </select>
+                        <hr>
+                        <label class="lbl">Seceret Message</label>
+                        <br>
+                        <textarea id="secretmsg" class="input" rows="2" placeholder="Enter Message Here.."></textarea>
+                    </div>
+                </form>
+                <p class="content-padded">
+                    <button id="btn-img" class="btn btn-positive btn-block">Take Picture</button>
+                    <br>
+                    <button id="btn-sendmsg" class="btn btn-primary btn-block"> <span class="icon icon-check"></span> Send </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="model-view" class="modal">
+        <header class="bar bar-nav">
+            <a id="btn-viewClose" class="icon icon-close pull-right" href="#model-view"></a>
+            <h1 class="title">Message</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group">
+                    <div id="err-2" class="err"></div>
+                    <div class="img-show" id="place-img-1"> </div>
+                    <canvas id="myCanvas-view" class="hide"></canvas>
+                    <div class="">
+                        <br>
+                        <h4 id="recitient_name"></h4>
+                        <hr>
+                        <h4 id="sender_name"></h4>
+                        <hr>
+                        <p id="msg-show">Message : </p>
+                        <input type="hidden" id="mid" class="hide" hidden>
+                        
+                    </div>
+                </form>
+                <p class="content-padded">
+                    <button id="btn-msgdelete" class="btn btn-negative btn-block"> <span class="icon icon-trash"></span> Delete Msg </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- include the compiled Ratchet JS -->
+    <script src="js/ratchet.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bits.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
